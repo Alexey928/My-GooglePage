@@ -84,3 +84,108 @@ body{
     padding: 0 20px;
     min-height: 40px;
 }
+.work-spase{
+    margin-top: 230px;
+}
+.work-spase__wraper{
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+.work-spase__name span+span{
+    font-size: 80px;
+}
+.work-spase__name:first-child{
+    font-size: 150px;
+}
+.work-spase__name{
+    position: relative;
+    letter-spacing: -1px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    width: 400px;
+    margin: 0 auto;
+    max-width: 560px;
+    border-radius: 40px;
+    border: 3px dashed transparent;
+    transition: all  0.6s linear;
+    color: red;
+}
+.work-spase__name .work-spase__name-item + .work-spase__name-item{
+    color: blue;
+}
+
+.work-spase__name:hover{
+    border-color: crimson;
+    background-color:cyan;
+    transform: scale(1.3) rotate(12deg);
+}
+.work-spase__name-item:hover{
+    cursor: pointer;
+}
+.work-spase__form-box{
+    margin-top: 50px;
+}
+.work-spase__input-text{
+    border-color: transparent;
+    width: 98%;
+    padding:0 40px;
+    position: absolute;
+    top:8px;
+    left: 1%;
+    background-color: transparent;
+}
+.work-spase__input-inner{
+    box-shadow: -1px -4px 10px 7px rgb(99 73 73 / 18%);
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    min-height: 38px;
+    position: relative;
+    z-index: 5;
+    border-radius: 30px;
+    border: 1px solid #c9eaef;
+}
+.work-spase__name input{
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 168px;
+    width: 50%;
+    background-color: beige;
+}
+.work-spase__name input::before{
+    position: absolute;
+    content:"Event-loop actuation val";
+    max-width: 120px;
+    top: -33px;
+    font-size: 12px;
+    color: red;
+}
+.work-spase__input-lable{
+    font-style: italic;
+    display: none;
+    color: rgb(255, 204, 0);
+    position: absolute;
+    font-size: 16px;
+    left: 75%;
+    top: 12px;
+}
+form .work-spase__input-submit + .work-spase__input-submit{
+    margin-left: 30px;
+}
+.work-spase__input-submit{
+    background-color: #e3f0fd;
+    min-height: 35px;
+    border-color: transparent;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+.work-spase__input-submit:hover{
+    border-color: rgb(250, 250, 0);
+    box-shadow: -1px -4px 10px 7px rgb(99 73 73 / 18%);
+}
+.work-spase__description{
+    margin-top: 20px;
+}
