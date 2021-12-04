@@ -4,8 +4,7 @@ const googleLogo = document.querySelector(".work-spase__name"),
     colors = ['#f50404', '#f5e504', '#51ff00', '#8a00da', 'red', 'blue'],
     rangeOfSpeed = document.querySelector(".work-spase__name input"),
     popup = document.querySelector(".modalWindow")
-//console.dir(searth);
-searth.addEventListener("click", tascSwither);
+
 
 
 let flag, flag1,
