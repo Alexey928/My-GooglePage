@@ -40,3 +40,60 @@ function recolorWorcSpaseName() {
         flag1 = true;
     };
 };
+
+let globalArr = [];
+const merge = (arrFirst, arrSecond, keysLeft, keysRigt) => {
+    const arrSort = [];
+    let i = j = 0;
+    while (i < arrFirst.length && j < arrSecond.length) {
+        let tymeArrValue;
+        if (arrFirst[i] < arrSecond[j]) {
+            tymeArrValue = arrFirst[i++];
+        } else {
+            tymeArrValue = arrSecond[j++];
+        }
+
+
+        arrSort.push(tymeArrValue);
+        // (arrFirst[i] < arrSecond[j]) ?
+        //     arrFirst[i++] : arrSecond[j++]  
+    }
+    const reternebulArr = [
+        ...arrSort,
+        ...arrFirst.slice(i),
+        ...arrSecond.slice(j)
+    ];
+    globalArr.splice(keysLeft[0], (keysLeft.length + keysRigt.length), ...reternebulArr)
+    return reternebulArr;
+
+};
+const mergeSort = (arr, flag = false, keys = []) => {
+    if (!arr || !arr.length) {
+        return null;
+    }
+    if (arr.length <= 1) {
+        return arr;
+    }
+    if (!flag) {
+        arr.forEach((item, i) => {
+            keys.push(i)
+        })
+        globalArr = [...arr]
+        flag = true;
+    }
+    const middle = Math.floor(arr.length / 2);
+    const arrLeft = arr.slice(0, middle);
+    const arrRight = arr.slice(middle);
+    const keysLeft = keys.slice(0, middle);
+    const keysRigt = keys.slice(middle);
+    let mergedArey = merge(mergeSort(arrLeft, flag, keysLeft), mergeSort(arrRight, flag, keysRigt), keysLeft, keysRigt);
+    console.log(mergedArey, keysLeft, keysRigt, arrLeft, arrRight, globalArr);
+    if (arr.length === globalArr.length) {
+        console.log(globalArr)
+    }
+    return mergedArey;
+};
+
+
+let arrey = mergeSort([1, 5, 2, 6, 3, 8, 1, 7, 2, 55, 89, 12, 11, 44, 55, 33, 25, 21, 65]);
+
