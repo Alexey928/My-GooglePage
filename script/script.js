@@ -41,6 +41,24 @@ function recolorWorcSpaseName() {
     };
 };
 
+
+function tascSwither() {
+    let meseg = inputText.value
+    console.dir(meseg);
+    switch (meseg) {
+        case 'marging_sort':
+            console.log('marging_sort')
+            break
+        case 'selection_sort':
+            console.log('selection_sort')
+            break
+        case 'sort_by_replacement':
+            console.log('sort_by_replacement')
+            break
+        default:
+    }
+}
+
 let globalArr = [];
 const merge = (arrFirst, arrSecond, keysLeft, keysRigt) => {
     const arrSort = [];
@@ -68,6 +86,7 @@ const merge = (arrFirst, arrSecond, keysLeft, keysRigt) => {
 
 };
 const mergeSort = (arr, flag = false, keys = []) => {
+
     if (!arr || !arr.length) {
         return null;
     }
